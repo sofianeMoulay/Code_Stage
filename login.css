@@ -1,0 +1,250 @@
+.container {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: white;
+  height: auto;
+  max-height: 600px;
+  width: 100%;
+  padding: 1.4em;
+}
+
+@media (min-width: 560px) {
+  .container {
+    padding: 3.2em 3em;
+    width: 80%;
+  }
+}
+@media (min-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+    width: 960px;
+    height: "auto";
+    padding: 0;
+  }
+}
+
+.auth__form {
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 360px;
+  background: transparent;
+}
+
+@media (min-width: 960px) {
+  .auth__form {
+    flex: 1 1 600px;
+    padding: 3em;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.form_image {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .form_image {
+    display: block;
+    position: relative;
+    flex: 1 1 360px;
+    overflow: hidden;
+  }
+  .form_image::before {
+    content: " ";
+    position: absolute;
+    width: 360px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #01a3a4;
+    opacity: 0.5;
+  }
+}
+
+.form_title {
+  font-family: inherit;
+  color: #172b4d;
+  text-align: left;
+  margin-bottom: 8px;
+  margin-top: 0px;
+}
+
+.form_subtitle {
+  color: #172b4d;
+  margin-top: 0px;
+  margin-bottom: 1.8em;
+}
+
+.form_group {
+  box-sizing: border-box;
+  margin: 1.2em auto;
+}
+.form_input {
+  box-sizing: border-box;
+  color: #172b4d;
+  background: #fcfcfc;
+  border: 2px solid #e7e7e7;
+  padding: 15px;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: opacity 0.3s;
+  text-align: left;
+  height: auto;
+  appearance: none;
+  transition: 0.2s;
+  outline: none;
+}
+
+.form_input:focus {
+  border-color: #89cfd6;
+  outline: none;
+}
+
+.form_input.has-error {
+  border-color: #f44336;
+  outline: none;
+}
+.form_label {
+  font-family: inherit;
+  color: #172b4d;
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 15px;
+}
+
+.form_submit {
+  font-family: inherit;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  color: #ffffff;
+  background-color: #01a3a4;
+  border-radius: 0.2em;
+  font-weight: 600;
+  line-height: 16px;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  width: 100%;
+  margin-bottom: 9px;
+  padding: 1em 2em 1em;
+}
+
+.forget-password {
+  display: block;
+  font-family: inherit;
+  cursor: pointer;
+  color: #01a3a4;
+  text-align: center;
+}
+.forget-password:hover {
+  color: #172b4d;
+  text-decoration: underline;
+}
+
+.devider {
+  color: #172b4d;
+  line-height: 1.5;
+  text-transform: none;
+  position: relative;
+  padding: 1.4rem 0;
+  margin-bottom: 0;
+}
+.devider::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: calc(50% - 1px);
+  z-index: 10;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(229, 232, 237);
+  border-image: initial;
+}
+.devider > span {
+  color: #172b4d;
+  text-transform: uppercase;
+  background: white;
+  padding: 0px 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: calc(50% - 7px);
+  z-index: 10;
+}
+
+.social-button {
+  font-family: inherit;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.3em 0.8rem;
+  background-color: white;
+  outline: none;
+  border-radius: 0.2rem;
+  border: 2px solid rgb(0, 97, 235);
+  color: rgb(0, 97, 235);
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.social-button.google > span {
+  margin-left: 6px;
+  font-weight: 600;
+}
+.social-button.google:hover {
+  border: 2px solid rgb(0, 97, 235);
+  background-color: rgb(0, 97, 235);
+  color: white;
+}
+
+.social-button.facebook {
+  background-color: #2277f2;
+  border-color: #2277f2;
+  color: white;
+}
+.social-button.facebook > span {
+  margin-left: 12px;
+  font-weight: 600;
+}
+.social-button.facebook :hover {
+  border: 2px solid #1767da;
+  background-color: #1767da;
+  color: white;
+}
+
+.switcher-text {
+  color: #172b4d;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 0;
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+.switcher-text:hover {
+  color: #01a3a4;
+}
